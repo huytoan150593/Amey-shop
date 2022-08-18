@@ -1,0 +1,130 @@
+#products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title {
+    font-size: xx-large;
+    font-weight: bolder;
+    padding: 50px;
+    border-bottom: 2px solid var(--low-grey);
+}
+
+.product-card {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.pro {
+    position: relative;
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid var(--low-grey);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    background-color: whitesmoke;
+}
+.pro:hover {
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+}
+.pro img {
+    width: 100%;
+    border-radius: 5px;
+}
+.pro .des {
+    text-align: start;
+    padding: 10px 0;
+    background-color: inherit;
+}
+.pro .des span {
+    background-color: inherit;
+    color: #606063;
+    font-size: 12px;
+}
+.pro .des h5 {
+    text-align: start;
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+    background-color: inherit;
+}
+.pro .des h4 {
+    text-align: start;
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--mid-grey);
+    background-color: inherit;
+}
+.pro .vote {
+    text-align: start;
+    background-color: inherit;
+}
+.pro .cart {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: var(--background);
+    font-weight: 500;
+    padding: 5px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+/* 
+.product {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+.img-field {
+    flex: 50%;
+}
+.main-img img{
+    width: 520px;
+    height: 520px;
+}
+.list-img img {
+    width: 102px;
+    height: 102px;
+    margin: auto 3px;
+}
+
+.detail-field {
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-name, .price {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.price {
+    color: var(--mid-grey);
+}
+
+#add-btn{
+    width: 90%;
+    height: 50px;
+    border: 2px solid black;
+    line-height: 2.5rem;
+    margin: 30px auto;
+    cursor: pointer;
+}
+#add-btn:hover {
+    background-color: var(--low-grey);
+}
+#subscription {
+    text-align: left;
+    margin: 30px auto;
+    font-size: large;
+    line-height: 1.8rem;
+} */
