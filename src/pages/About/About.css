@@ -37,6 +37,7 @@
     width: 60%;
     margin: 50px auto;
     display: flex;
+    max-width: 700px;
 }
 .sub-form input { 
     width: 70%;
@@ -46,7 +47,7 @@
 }
 
 #sub-btn {
-    flex-grow: 0.6;
+    flex-grow: 1;
     height: 50px;
     background-color: black;
     color: whitesmoke;

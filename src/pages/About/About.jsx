@@ -1,9 +1,9 @@
 import React from 'react';
 import './About.css';
-export const About = () => {
+
+const About = () => {
   return (
     <div id='about'>
-        <img src="./assets/background.webp" alt=""/>
         <div className="title">About Us</div>
         <div className="content">
         A commited project by Benjamin Tran to bridge (/brij/)  the gap between luxury and fast fashion. Bringing you the highest quality clothing piece at the most affordable price with modern contemporary aesthetic fusing classic and timeless designs. 
@@ -18,3 +18,5 @@ export const About = () => {
     </div>
   )
 }
+
+export default About

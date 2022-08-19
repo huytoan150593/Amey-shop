@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
 :root {
-    --background: #F2F3F4;
+    --back-color: #F2F3F4;
     --low-grey: rgba(109,109,109,.3);
     --mid-grey: #6d6d6d;
 }
@@ -9,7 +9,7 @@ html, body, * {
     padding: 0;
     text-align: center;
     box-sizing: border-box;
-    background-color: var(--background);
+    background-color: var(--back-color);
     font-family: 'Mulish', sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;

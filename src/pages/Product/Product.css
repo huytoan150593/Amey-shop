@@ -1,0 +1,130 @@
+/* .product {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+.img-field {
+    flex: 50%;
+}
+.main-img img{
+    width: 520px;
+    height: fit-content;
+    border: 2px solid var(--low-grey);
+}
+.list-img img {
+    width: 102px;
+    height: 102px;
+    margin: auto 3px;
+}
+
+.detail-field {
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-name, .price {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.price {
+    color: var(--mid-grey);
+}
+
+#add-btn{
+    width: 90%;
+    height: 50px;
+    border: 2px solid black;
+    line-height: 2.5rem;
+    margin: 30px auto;
+    cursor: pointer;
+}
+#add-btn:hover {
+    background-color: var(--low-grey);
+}
+#subscription {
+    text-align: left;
+    margin: 30px auto;
+    font-size: large;
+    line-height: 1.8rem;
+} */
+
+/* ----------------------------------------------------------------------- */
+
+#prodetails {
+    display: flex;
+    margin-top: 20px;
+}
+#prodetails .single-pro-img {
+    width: 40%;
+    margin: auto 50px;
+}
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.small-img-col {
+    margin-right: 5px;
+}
+.small-img-col img{
+    width: 100px;
+    cursor: pointer;
+}
+
+#prodetails .single-pro-details {
+    width: 50%;
+    padding-top: 30px;
+}
+#prodetails .single-pro-details h5, h1, h2, h4 {
+    text-align: start;
+}
+#prodetails .single-pro-details h1 {
+    padding: 30px 0 20px 0;
+}
+#prodetails .single-pro-details h4{
+    padding: 40px 0 20px 0;
+}
+#prodetails .single-pro-details h2 {
+    text-align: start;
+    font-size: 26px;
+    color: var(--mid-grey);
+}
+#prodetails .single-pro-details select {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid var(--mid-grey);
+}
+#prodetails .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+#prodetails .single-pro-details input:focus {
+    outline: none;
+}
+#prodetails .single-pro-details button {
+    width: 60%;
+    height: 50px;
+    border: 2px solid black;
+    line-height: 2.5rem;
+    margin: 30px auto;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+#prodetails .single-pro-details button:hover {
+    background-color: var(--low-grey);
+}
+
+#prodetails .single-pro-details p {
+    line-height: 25px;
+    text-align: start;
+    font-size: large;
+}
