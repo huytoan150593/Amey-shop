@@ -3,12 +3,6 @@
     flex-direction: column;
     align-items: center;
 }
-.title {
-    font-size: xx-large;
-    font-weight: bolder;
-    padding: 50px;
-    border-bottom: 2px solid var(--low-grey);
-}
 
 .product-card {
     display: flex;
@@ -78,5 +72,5 @@
     right: 20px;
 }
 
-/* --------------------------------------------------------------- */
+
 

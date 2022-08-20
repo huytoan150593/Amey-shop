@@ -10,13 +10,6 @@
     border-bottom: 2px solid var(--low-grey);
 }
 
-.title {
-    font-size: xx-large;
-    font-weight: bolder;
-    padding: 50px;
-    border-bottom: 2px solid var(--low-grey);
-}
-
 .content {
     text-align: center;
     max-width: 900px;

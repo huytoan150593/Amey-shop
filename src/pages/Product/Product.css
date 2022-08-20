@@ -59,25 +59,53 @@
 }
 #prodetails .single-pro-img {
     width: 40%;
-    margin: auto 50px;
+    margin: auto 25px auto 50px;
 }
-
+#main-img {
+    position: relative;
+}
+#main-img img{
+    min-width: 320px;
+}
+#move-btn {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    font-size: 2.5rem;
+    background: rgba(0,0,0,0);
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+#move-btn span{
+    background: inherit;
+    color: rgba(237,233,232,.5);
+    transition: all .2s ease-in-out;
+    border-radius: 20%;
+}
+#move-btn span:hover {
+    background: rgba(237,233,232,.5);
+    color: rgba(25,25,25,.5);
+}
 .small-img-group {
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
+    flex-wrap: wrap;
 }
 .small-img-col {
-    margin-right: 5px;
+    margin-right: 2px;
+    flex-basis: 22%;
 }
 .small-img-col img{
-    width: 100px;
+    min-width: 100%;
+    height: auto;
     cursor: pointer;
 }
 
 #prodetails .single-pro-details {
     width: 50%;
     padding-top: 30px;
+    margin: 0px 50px auto 25px;
 }
 #prodetails .single-pro-details h5, h1, h2, h4 {
     text-align: start;
@@ -87,13 +115,14 @@
 }
 #prodetails .single-pro-details h4{
     padding: 40px 0 20px 0;
+    font-size: large;
 }
 #prodetails .single-pro-details h2 {
     text-align: start;
     font-size: 26px;
     color: var(--mid-grey);
 }
-#prodetails .single-pro-details select {
+/* #prodetails .single-pro-details select {
     display: block;
     padding: 5px 10px;
     margin-bottom: 10px;
@@ -106,7 +135,7 @@
     padding-left: 10px;
     font-size: 16px;
     margin-right: 10px;
-}
+} */
 #prodetails .single-pro-details input:focus {
     outline: none;
 }
@@ -118,6 +147,7 @@
     margin: 30px auto;
     cursor: pointer;
     font-size: 1.2rem;
+    max-width: 400px;
 }
 #prodetails .single-pro-details button:hover {
     background-color: var(--low-grey);
@@ -127,4 +157,34 @@
     line-height: 25px;
     text-align: start;
     font-size: large;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+
+}
+@media screen and (max-width: 768px) {
+    #prodetails {
+        flex-wrap: wrap;
+    }
+    #prodetails .single-pro-img {
+        width: 90%;
+        margin: auto 20px;
+    }
+    .small-img-group {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    #prodetails .single-pro-details {
+        width: 100%;
+        margin: 0px 50px auto 50px;
+      }
+}
+@media screen and (max-width: 480px) {
+    #prodetails .single-pro-details {
+        margin: 0px 25px auto 25px;
+    }
+    .small-img-col {
+        width: 90px;
+    }
 }
