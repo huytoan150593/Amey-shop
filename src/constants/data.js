@@ -53,7 +53,6 @@ export const data = [
             "./assets/Áo polo khoá kéo 3 màu (đen xám trắng)/4.jpg",
             "./assets/Áo polo khoá kéo 3 màu (đen xám trắng)/5.jpg",
             "./assets/Áo polo khoá kéo 3 màu (đen xám trắng)/6.jpg",
-            "./assets/Áo polo khoá kéo 3 màu (đen xám trắng)/7.jpg",
         ]
     },
     {
@@ -103,7 +102,7 @@ export const data = [
             "./assets/Áo sơ mi ngắn tay  form slimfit co giãn 4 chiều/2.jpg",
             "./assets/Áo sơ mi ngắn tay  form slimfit co giãn 4 chiều/3.jpg",
             "./assets/Áo sơ mi ngắn tay  form slimfit co giãn 4 chiều/4.jpg",
-            "./assets/Áo sơ mi ngắn tay  form slimfit co giãn 4 chiều/5.jpg"
+            "./assets/Áo sơ mi ngắn tay  form slimfit co giãn 4 chiều/5.jpg",
         ]
     },
     {
@@ -134,7 +133,7 @@ export const data = [
             "./assets/Áo Tshirt slimfit cotton 100/4.jpg",
             "./assets/Áo Tshirt slimfit cotton 100/5.jpg",
             "./assets/Áo Tshirt slimfit cotton 100/6.jpg",
-            "./assets/Áo Tshirt slimfit cotton 100/7.jpg"
+            "./assets/Áo Tshirt slimfit cotton 100/7.jpg",
         ]
     },
     {

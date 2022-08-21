@@ -1,14 +1,15 @@
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Navbar } from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Products from './pages/Products/Products';
 import Contact from './pages/Contact/Contact';
 import Product from './pages/Product/Product';
+import Footer from './components/Footer/Footer';
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter basename='/'>
       <div className="App">
         <Navbar />
         <Routes>
@@ -18,8 +19,9 @@ function App() {
           <Route path='/:productId' element={<Product />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

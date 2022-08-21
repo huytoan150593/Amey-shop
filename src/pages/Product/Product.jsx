@@ -5,43 +5,6 @@ import { data } from '../../constants/data';
 import './Product.css';
 import Title from '../../components/Title/Title';
 
-// const Product = () => {
-//     const params = useParams();
-//     const product = data.find(product => product.id.toString() === params.productId);
-//     const firstImg = product.images[0];
-//     const [url, setUrl] = useState(firstImg);
-//     const handleClick = (e) => {
-//         const newUrl = e.target.getAttribute("src");
-//         setUrl(newUrl);
-//     }
-//   return (
-//     <div className="product">
-//             <div className="img-field">
-//                 <div className="main-img">
-//                     <img src={url} alt="" />
-//                 </div>
-//                 <div className="list-img">
-//                     {product.images.map((item, idx) => {
-//                         return (
-//                             <img key={idx} src={item} alt="" onClick={e => handleClick(e)}/>
-//                         )
-//                     })}
-//                 </div>
-//             </div>
-//             <div className="detail-field">
-//                 <h1 className="product-name">
-//                     {product.name}
-//                 </h1>
-//                 <h2 className="price">{product.price} &#8364; <br/><small>Tax included</small></h2>
-//                 <div id="add-btn">ADD TO CART</div>
-//                 <div id="subscription">
-//                     <strong>&#9752; Product Detail</strong><br/><br/>
-//                     {product.description}
-//                 </div>
-//             </div>
-//         </div>
-//   )
-// }
 const Product = () => {
     const params = useParams();
     const product = data.find(product => product.id.toString() === params.productId);
@@ -70,7 +33,7 @@ const Product = () => {
     }
     return (
     <>
-        <Title title="Product infomation" />
+        <Title title="Product" />
         <section id="prodetails" className='section'>
             <div className="single-pro-img">
                 <div id="main-img">
