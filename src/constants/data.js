@@ -1,3 +1,4 @@
+
 export const data = [
     {
         id: 1,
@@ -397,4 +398,31 @@ export const data = [
         ]
     },
 
+]
+
+export const collection = [
+    {
+        id: 1,
+        image: "/assets/collection1.png",
+        event: "New Arrival",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur aliquid voluptas, incidunt beatae reprehenderit obcaecati veritatis ipsam officiis magnam ex earum ratione adipisci natus enim quia esse accusamus commodi quibusdam!"
+    },
+    {
+        id: 2,
+        image: "/assets/collection2.png",
+        event: "Best Choice for Winter",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur aliquid voluptas, incidunt beatae reprehenderit obcaecati veritatis ipsam officiis magnam ex earum ratione adipisci natus enim quia esse accusamus commodi quibusdam!"
+    },
+    {
+        id: 3,
+        image: "/assets/collection3.png",
+        event: "Summer Sale",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur aliquid voluptas, incidunt beatae reprehenderit obcaecati veritatis ipsam officiis magnam ex earum ratione adipisci natus enim quia esse accusamus commodi quibusdam!"
+    },
+    {
+        id: 4,
+        image: "/assets/collection4.png",
+        event: "Shoes Collection",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur aliquid voluptas, incidunt beatae reprehenderit obcaecati veritatis ipsam officiis magnam ex earum ratione adipisci natus enim quia esse accusamus commodi quibusdam!"
+    },
 ]

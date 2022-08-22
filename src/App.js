@@ -7,6 +7,7 @@ import Products from './pages/Products/Products';
 import Contact from './pages/Contact/Contact';
 import Product from './pages/Product/Product';
 import Footer from './components/Footer/Footer';
+import Blog from './pages/Blog/Blog';
 function App() {
   return (
     <HashRouter basename='/'>
@@ -18,6 +19,7 @@ function App() {
           <Route path='/products' element={<Products />} />
           <Route path='/:productId' element={<Product />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/blog' element={<Blog />} />
         </Routes>
         <Footer />
       </div>

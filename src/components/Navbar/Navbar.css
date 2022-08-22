@@ -1,4 +1,4 @@
-.navbar {
+#navbar {
     position: relative;
     margin: 35px auto 0 auto;
     display: flex;
@@ -56,7 +56,6 @@
     position: relative;
     list-style: none;
     font-size: 1.2rem;
-    font-family: 'Mulish', sans-serif;
     margin: auto 35px;
 }
 

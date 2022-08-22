@@ -10,7 +10,7 @@ export const Navbar = () => {
         setShow(!show);
     }
   return (
-    <div className='navbar'>
+    <div id='navbar'>
         <div className="header">
             <div className='distance'></div>
             <Link to='' className='logo'>
@@ -29,6 +29,7 @@ export const Navbar = () => {
                 <li className='menu-item'><Link to="products">Products</Link></li>
                 <li className='menu-item'><Link to="about">About Us</Link></li>
                 <li className='menu-item'><Link to="contact">Contact</Link></li>
+                <li className='menu-item'><Link to="blog">Blog</Link></li>
             </ul>
         </div>
         { show && <MobileMenu />}

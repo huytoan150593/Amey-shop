@@ -5,7 +5,6 @@ import { BsInstagram, BsFacebook, BsTwitter, BsYoutube} from 'react-icons/bs';
 const Footer = () => {
   return (
     <div id='footer'>
-        {/* <img src="/assets/background-footer.jpg" alt="" /> */}
         <div id="e-form">
             <h1>Amey-Shop</h1>
             <input type="text" placeholder='Enter Your E-Mail *'/>

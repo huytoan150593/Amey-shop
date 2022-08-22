@@ -127,6 +127,9 @@
       }
 }
 @media screen and (max-width: 480px) {
+    .pro {
+        width: 80%;
+    }
     #prodetails .single-pro-details {
         margin: 0px 25px auto 25px;
     }

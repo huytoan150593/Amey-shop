@@ -1,8 +1,5 @@
 #footer {
     position: relative;
-    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/public/assets/background-footer.jpg");
-    background-position: center;
-    background-size: cover;
     width: 100%;
     border: 2px solid var(--low-grey);
     display: flex;
@@ -13,14 +10,16 @@
 h1, h3, p, a, .icons-group, .icon-ft {
     background-color: transparent;
 }
-h1 {
+#footer h1 {
     padding: 0 0 2rem;
+    font-family: 'Sofia', cursive;
 }
-h3 {
+#footer h3 {
     text-align: end;
     margin-bottom: 20px;
+    font-family: 'Sofia', cursive;
 }
-p {
+#footer p {
     text-align: end;
 }
 
@@ -55,7 +54,7 @@ p {
     cursor: pointer;
 }
 #btn-submit:hover {
-    opacity: .8;
+    opacity: .6;
 }
 #info {
     flex-basis: 20%;
@@ -66,7 +65,7 @@ p {
     margin-top: 20px;
     width: 100%;
 }
-.icons-group > a {
+.icons-group a {
     width: 45px;
     height: 45px;
     border: 1px solid black;
@@ -74,9 +73,11 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .2s ease-in-out;
 }
-.icons-group > a:hover {
+.icons-group a:hover {
     opacity: .8;
+    transform: scale(1.2);
 }
 #navi {
     flex-basis: 20%;
@@ -84,15 +85,16 @@ p {
     flex-direction: column;
     justify-content: flex-start;
 }
-#navi > span {
-    text-align: end;
+
+#footer a:hover{
+    text-decoration: underline;
 }
 
 /* Responsive 
-@media screen and (max-width: 1201px) 
-@media screen and (max-width: 1024px)
-@media screen and (max-width: 768px) 
-@media screen and (max-width: 480px)
+@media screen and (max-width: 1201px){}
+@media screen and (max-width: 1024px){}
+@media screen and (max-width: 768px){}
+@media screen and (max-width: 480px){}
 */
 
 @media screen and (max-width: 1024px) {

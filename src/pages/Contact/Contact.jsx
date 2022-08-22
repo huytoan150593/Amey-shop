@@ -1,8 +1,11 @@
 import React from 'react';
+import Title from '../../components/Title/Title';
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div>
+      <Title title="Contact" />
+    </div>
   )
 }
 

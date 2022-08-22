@@ -46,4 +46,8 @@
     color: whitesmoke;
     font-weight: bold;
     line-height: 3rem;
+    cursor: pointer;
+}
+#sub-btn:hover {
+    opacity: 0.8;
 }

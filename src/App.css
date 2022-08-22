@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+/* font-family: 'Righteous', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Bree Serif', serif;
+font-family: 'Sofia', cursive; */
+/* font-family: 'Mulish', sans-serif;
+font-family: 'Permanent Marker', cursive; */
 :root {
-    --back-color: #F2F3F4;
+    --back-color: linear-gradient(#CFD6E6, #000);
     --low-grey: rgba(109,109,109,.3);
     --mid-grey: #6d6d6d;
 }
