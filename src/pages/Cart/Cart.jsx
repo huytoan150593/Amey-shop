@@ -8,8 +8,8 @@ const Cart = () => {
   return (
     <div>
         <h1>Hello anh em</h1>
-        {cart.map(item => (
-            <h3 key={item}>{item}</h3>
+        {cart.map((item,index) => (
+            <h3 key={index}>{item}</h3>
         ))}
     </div>
   )

@@ -1,15 +1,23 @@
-import { useState } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { BsInstagram, BsFacebook, BsCart3} from 'react-icons/bs';
 import './Navbar.css';
 import { MobileMenu } from './MobileMenu';
 import { Link } from 'react-router-dom';
 import { ShowNavContext } from '../../Context/GlobalContext';
+import { CartContext } from '../../Context/GlobalContext';
 
 export const Navbar = () => {
+    const {cart} = useContext(CartContext);
     const [show, setShow] = useState(false);
     const handleClick = () => {
         setShow(!show);
     }
+    useEffect(()=>{
+        const cargo = document.querySelector("#cargo");
+        if(cart.length !== 0){
+            cargo.classList.add("cart-btn");
+        }
+    },[cart])
   return (
     <ShowNavContext.Provider value={{show, setShow}}>
     <div id='navbar'>
@@ -21,7 +29,7 @@ export const Navbar = () => {
             <div className="icons">
                 <a className="icon" href="https://www.instagram.com/ameystoree/"><BsInstagram size={30}/></a>
                 <a className="icon" href="https://www.facebook.com/profile.php?id=100064902188811"><BsFacebook size={30}/></a>
-                <Link to='/my-cart'><span className='cart-btn'><BsCart3 id="cart-btn" size={30}/></span></Link>
+                <Link to='/my-cart'><span id="cargo" data-content={cart.length}><BsCart3 size={30}/></span></Link>
                 <span id='toggle-btn' onClick={handleClick}></span>
             </div>
         </div>
