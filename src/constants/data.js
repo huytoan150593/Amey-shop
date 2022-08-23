@@ -2,6 +2,7 @@
 export const data = [
     {
         id: 1,
+        collection: "New Arrival",
         name: "Áo Polo cổ V chất cotton co giãn 4 chiều",
         collab: "Adidas",
         price: 100,
@@ -26,6 +27,7 @@ export const data = [
     },
     {
         id: 2,
+        collection: "New Arrival",
         name: "áo polo dài tay khoá kéo (đen trắng)",
         collab: "Nike",
         price: 100,
@@ -42,6 +44,7 @@ export const data = [
     },
     {
         id: 3,
+        collection: "New Arrival",
         name: "Áo polo khoá kéo 3 màu (đen xám trắng)",
         collab: "Addidas",
         price: 100,
@@ -58,6 +61,7 @@ export const data = [
     },
     {
         id: 4,
+        collection: "New Arrival",
         name: "Áo sơ mi cổ trụ form slim fit (đen trắng)",
         collab: "Addidas",
         price: 100,
@@ -73,6 +77,7 @@ export const data = [
     },
     {
         id: 5,
+        collection: "New Arrival",
         name: "Áo sơ mi form slimfit co giãn 4 chiều (đen trắng)",
         collab: "Addidas",
         price: 100,
@@ -93,6 +98,7 @@ export const data = [
     },
     {
         id: 6,
+        collection: "Shoes Collection",
         name: "Áo sơ mi ngắn tay  form slimfit co giãn 4 chiều",
         collab: "Addidas",
         price: 100,
@@ -108,6 +114,7 @@ export const data = [
     },
     {
         id: 7,
+        collection: "New Arrival",
         name: "áo tshirt oversize xám tro",
         collab: "Addidas",
         price: 100,
@@ -122,6 +129,7 @@ export const data = [
     },
     {
         id: 8,
+        collection: "New Arrival",
         name: "Áo Tshirt slimfit cotton 100",
         collab: "Addidas",
         price: 100,
@@ -139,6 +147,7 @@ export const data = [
     },
     {
         id: 9,
+        collection: "Best choice for Winter",
         name: "chinos đen co giãn 4 chiều",
         collab: "Addidas",
         price: 100,
@@ -152,6 +161,7 @@ export const data = [
     },
     {
         id: 10,
+        collection: "New Arrival",
         name: "Henly Light Wash",
         collab: "Addidas",
         price: 100,
@@ -168,6 +178,7 @@ export const data = [
     },
     {
         id: 11,
+        collection: "New Arrival",
         name: "oversize cổ lửng cotton (đen  trắng)",
         collab: "Addidas",
         price: 100,
@@ -185,6 +196,7 @@ export const data = [
     },
     {
         id: 12,
+        collection: "New Arrival",
         name: "quần âu đen cropped co giãn 4 chiều",
         collab: "Addidas",
         price: 100,
@@ -198,6 +210,7 @@ export const data = [
     },
     {
         id: 13,
+        collection: "New Arrival",
         name: "quần âu kẻ caro co giãn 4 chiều",
         collab: "Addidas",
         price: 100,
@@ -211,6 +224,7 @@ export const data = [
     },
     {
         id: 14,
+        collection: "Summer Sale",
         name: "quần âu xám co giãn 4 chiều",
         collab: "Addidas",
         price: 100,
@@ -225,6 +239,7 @@ export const data = [
     },
     {
         id: 15,
+        collection: "Summer Sale",
         name: "short jean rách co giãn 4 chiều (xanh đen)",
         collab: "Addidas",
         price: 100,
@@ -243,6 +258,7 @@ export const data = [
     },
     {
         id: 16,
+        collection: "Summer Sale",
         name: "short jeans trơn co giãn 4 chiều (đen xanh)",
         collab: "Addidas",
         price: 100,
@@ -263,6 +279,7 @@ export const data = [
     },
     {
         id: 17,
+        collection: "Summer Sale",
         name: "skinny jean rách các loại (đen xanh)",
         collab: "Addidas",
         price: 100,
@@ -282,6 +299,7 @@ export const data = [
     },
     {
         id: 18,
+        collection: "Summer Sale",
         name: "skinny jeans đen rách khoá kéo(gối+đùi) co giãn 4 chiều",
         collab: "Addidas",
         price: 100,
@@ -295,6 +313,7 @@ export const data = [
     },
     {
         id: 19,
+        collection: "New Arrival",
         name: "skinny jeans rách gối co giãn chiều(đen xanh)",
         collab: "Addidas",
         price: 100,
@@ -315,6 +334,7 @@ export const data = [
     },
     {
         id: 20,
+        collection: "New Arrival",
         name: "skinny jeans trắng rách co giãn 4 chiều",
         collab: "Addidas",
         price: 100,
@@ -328,6 +348,7 @@ export const data = [
     },
     {
         id: 21,
+        collection: "Best Choice for Winter",
         name: "skinny jeans trơn co giãn 4 chiều (đen xanh)",
         collab: "Addidas",
         price: 100,
@@ -347,6 +368,7 @@ export const data = [
     },
     {
         id: 22,
+        collection: "Best Choice for Winter",
         name: "skinny Jeans xám tro rách co giãn 4 chiều",
         collab: "Addidas",
         price: 100,
@@ -364,6 +386,7 @@ export const data = [
     },
     {
         id: 23,
+        collection: "Best Choice for Winter",
         name: "skinny Jeans xám tro rách gấu + gối khoá kéo",
         collab: "Addidas",
         price: 100,
@@ -378,6 +401,7 @@ export const data = [
     },
     {
         id: 24,
+        collection: "Best Choice for Winter",
         name: "skinny jeans xanh rách (gối+đùi) co giãn 4 chiều",
         collab: "Addidas",
         price: 100,
@@ -403,26 +427,26 @@ export const data = [
 export const collection = [
     {
         id: 1,
-        image: "/assets/collection1.png",
         event: "New Arrival",
+        image: "./assets/collection1.png",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur aliquid voluptas, incidunt beatae reprehenderit obcaecati veritatis ipsam officiis magnam ex earum ratione adipisci natus enim quia esse accusamus commodi quibusdam!"
     },
     {
         id: 2,
-        image: "/assets/collection2.png",
         event: "Best Choice for Winter",
+        image: "./assets/collection2.png",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur aliquid voluptas, incidunt beatae reprehenderit obcaecati veritatis ipsam officiis magnam ex earum ratione adipisci natus enim quia esse accusamus commodi quibusdam!"
     },
     {
         id: 3,
-        image: "/assets/collection3.png",
         event: "Summer Sale",
+        image: "./assets/collection3.png",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur aliquid voluptas, incidunt beatae reprehenderit obcaecati veritatis ipsam officiis magnam ex earum ratione adipisci natus enim quia esse accusamus commodi quibusdam!"
     },
     {
         id: 4,
-        image: "/assets/collection4.png",
         event: "Shoes Collection",
+        image: "./assets/collection4.png",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur aliquid voluptas, incidunt beatae reprehenderit obcaecati veritatis ipsam officiis magnam ex earum ratione adipisci natus enim quia esse accusamus commodi quibusdam!"
     },
 ]

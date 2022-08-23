@@ -2,13 +2,14 @@ import React from 'react';
 import './Home.css';
 import Title from '../../components/Title/Title';
 import { collection } from '../../constants/data';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
     <div id='home'>
       <div id="space">
         <div id="slogan">Brilliant Basics for Men <br/>and Comfortable</div>
-        <div id="main-btn">Shop Now</div>
+        <Link to="products"><div id="main-btn">Shop Now</div></Link>
       </div>
       <Title title='Enjoy Our Collections!!!!'/>
       <div className="collection-wrapper">
@@ -18,7 +19,7 @@ const Home = () => {
             <div className="collect-event">
               <h1>{item.event}</h1>
               <p>{item.description}</p>
-              <div className="shop-btn">View More</div>
+              <Link to={`/${item.event}`}><div className="shop-btn">View More</div></Link>
             </div>
           </div>
         ))}

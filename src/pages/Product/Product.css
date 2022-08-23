@@ -85,7 +85,7 @@
 #prodetails .single-pro-details input:focus {
     outline: none;
 }
-#prodetails .single-pro-details button {
+#add-btn {
     width: 60%;
     height: 50px;
     border: 2px solid black;
@@ -95,7 +95,7 @@
     font-size: 1.2rem;
     max-width: 400px;
 }
-#prodetails .single-pro-details button:hover {
+#add-btn:hover {
     background-color: var(--low-grey);
 }
 

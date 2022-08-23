@@ -4,12 +4,19 @@ import { useState } from 'react';
 import { data } from '../../constants/data';
 import './Product.css';
 import Title from '../../components/Title/Title';
+import { CartContext } from '../../Context/GlobalContext';
+import { useContext } from 'react';
 
 const Product = () => {
+    const {setCart} = useContext(CartContext);
     const params = useParams();
     const product = data.find(product => product.id.toString() === params.productId);
     const firstImg = product.images[0];
     const [url, setUrl] = useState(firstImg);
+    const handleAddItem = (e) => {
+        const newItem = Number(e.target.closest(".single-pro-details").dataset.index);
+        setCart(cart => [...cart, newItem]);
+    }
     const handleClick = (e) => {
         const newUrl = e.target.getAttribute("src");
         setUrl(newUrl);
@@ -54,20 +61,20 @@ const Product = () => {
                     }
                 </div>
             </div>
-            <div className="single-pro-details">
-                    <h5>{product.collab}</h5>
-                    <h1>{product.name}</h1>
-                    <h2>&#8356; {product.price}</h2>
-                    {/* <select>
-                        <option value="size">Select Size</option>
-                        <option value="">S</option>
-                        <option value="">M</option>
-                        <option value="">L</option>
-                        <option value="">XL</option>
-                    </select> */}
-                    <button>Add To Cart</button>
-                    <h4><strong>&#9827; Product Detail</strong></h4>
-                    <p>{product.description}</p>
+            <div className="single-pro-details" data-index={product.id}>
+                <h5>{product.collab}</h5>
+                <h1>{product.name}</h1>
+                <h2>&#8356; {product.price}</h2>
+                {/* <select>
+                    <option value="size">Select Size</option>
+                    <option value="">S</option>
+                    <option value="">M</option>
+                    <option value="">L</option>
+                    <option value="">XL</option>
+                </select> */}
+                <div id="add-btn" onClick={e => handleAddItem(e)}>Add To Cart</div> 
+                <h4><strong>&#9827; Product Detail</strong></h4>
+                <p>{product.description}</p>
             </div>
         </section>
     </>

@@ -3,6 +3,7 @@ import { BsInstagram, BsFacebook, BsCart3} from 'react-icons/bs';
 import './Navbar.css';
 import { MobileMenu } from './MobileMenu';
 import { Link } from 'react-router-dom';
+import { ShowNavContext } from '../../Context/GlobalContext';
 
 export const Navbar = () => {
     const [show, setShow] = useState(false);
@@ -10,6 +11,7 @@ export const Navbar = () => {
         setShow(!show);
     }
   return (
+    <ShowNavContext.Provider value={{show, setShow}}>
     <div id='navbar'>
         <div className="header">
             <div className='distance'></div>
@@ -19,7 +21,7 @@ export const Navbar = () => {
             <div className="icons">
                 <a className="icon" href="https://www.instagram.com/ameystoree/"><BsInstagram size={30}/></a>
                 <a className="icon" href="https://www.facebook.com/profile.php?id=100064902188811"><BsFacebook size={30}/></a>
-                <a href="google.com" className="icon"><BsCart3 size={30}/></a>
+                <Link to='/my-cart'><span className='cart-btn'><BsCart3 id="cart-btn" size={30}/></span></Link>
                 <span id='toggle-btn' onClick={handleClick}></span>
             </div>
         </div>
@@ -34,5 +36,6 @@ export const Navbar = () => {
         </div>
         { show && <MobileMenu />}
     </div>
+    </ShowNavContext.Provider>
   )
 }

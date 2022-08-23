@@ -26,9 +26,10 @@
     left: 20%;
     background-color: transparent;
     border: 2px solid black;
-    line-height: 2.5rem;
+    line-height: 2.8rem;
     font-size: 1rem;
     cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
 }
 #main-btn:hover {
     background-color: black;
@@ -91,6 +92,12 @@
 @media screen and (max-width: 1024px){}
 @media screen and (max-width: 768px){}
 @media screen and (max-width: 480px){
+    #slogan {
+        left: 0;
+    }
+    #main-btn {
+        top: 60%;
+    }
     .reverse {
         flex-direction: row;
     }
