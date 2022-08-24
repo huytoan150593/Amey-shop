@@ -65,13 +65,6 @@ const Product = () => {
                 <h5>{product.collab}</h5>
                 <h1>{product.name}</h1>
                 <h2>&#8356; {product.price}</h2>
-                {/* <select>
-                    <option value="size">Select Size</option>
-                    <option value="">S</option>
-                    <option value="">M</option>
-                    <option value="">L</option>
-                    <option value="">XL</option>
-                </select> */}
                 <div id="add-btn" onClick={e => handleAddItem(e)}>Add To Cart</div> 
                 <h4><strong>&#9827; Product Detail</strong></h4>
                 <p>{product.description}</p>

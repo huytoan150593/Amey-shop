@@ -12,17 +12,20 @@ import Footer from './components/Footer/Footer';
 import Blog from './pages/Blog/Blog';
 import Collection from './pages/Collection/Collection';
 import Cart from './pages/Cart/Cart';
+import { data } from './constants/data';
+
 function App() {
   const [cart, setCart] = useState([]);
   const handleAddToCart = (e) => {
-    const newItem = Number(e.target.closest(".pro").dataset.index);
+    const newItemId = Number(e.target.closest(".pro").dataset.index);
+    const newItem = data[newItemId];
     setCart(prev => [...prev, newItem]);
 }
   return (
     <HashRouter basename='/'>
       <CartContext.Provider value={{cart, setCart, handleAddToCart}}>
-      <Navbar />
       <div className="App">
+        <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -33,8 +36,8 @@ function App() {
           <Route path='/blog' element={<Blog />} />
           <Route path='/my-cart' element={<Cart />} />
         </Routes>
+        <Footer />
       </div>
-      <Footer />
       </CartContext.Provider>
     </HashRouter>
   );
