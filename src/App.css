@@ -4,9 +4,10 @@ font-family: 'Indie Flower', cursive;
 font-family: 'Bree Serif', serif;
 font-family: 'Sofia', cursive; */
 /* font-family: 'Mulish', sans-serif;
-font-family: 'Permanent Marker', cursive; */
+font-family: 'Permanent Marker', cursive;
+linear-gradient(#CFD6E6, #000) */
 :root {
-    --back-color: linear-gradient(#CFD6E6, #000);
+    --back-color: white;
     --low-grey: rgba(109,109,109,.3);
     --mid-grey: #6d6d6d;
 }

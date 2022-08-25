@@ -51,3 +51,13 @@
 #sub-btn:hover {
     opacity: 0.8;
 }
+
+@media screen and (max-width: 480px){
+    .sub-form{
+        flex-wrap: wrap;
+    }
+    .sub-form input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

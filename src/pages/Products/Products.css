@@ -1,7 +1,5 @@
 #collection, #products {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    
 }
 
 .product-card {
@@ -59,18 +57,45 @@
     text-align: start;
     background-color: inherit;
 }
-.pro .cart {
-    width: 40px;
+.pro .cart-icon {
+    width: 150px;
     height: 40px;
     line-height: 40px;
-    border-radius: 50px;
-    background-color: var(--background);
-    font-weight: 500;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
     padding: 5px;
     position: absolute;
     bottom: 20px;
     right: 20px;
+    text-align: end;
+    z-index: 1;
+    transition: 0s;
 }
+.cart-icon-pseudo {
+    position: absolute;
+    height: 40px;
+    bottom: 20px;
+    right: -150px;
+    width: 180px;
+    line-height: 2.3rem;
+    opacity: 0;
+    background-color: var(--mid-grey);
+    transition: .3s ease-in-out;
+    border-radius: 20px;
+    text-align: start;
+    padding-left: 30px
+}
+.cart-icon:hover {
+    background-color: var(--mid-grey);
+    opacity: .3;
+}
+.cart-icon:hover + .cart-icon-pseudo {
+    right: 10px;
+    opacity: 1;
+}
+
 
 
 

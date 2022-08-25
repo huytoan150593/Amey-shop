@@ -1,0 +1,70 @@
+#form-wrapper {
+    margin: 50px auto;
+}
+.ccform {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px;
+    max-width: 600px;
+    border: 2px solid var(--low-grey);
+}
+
+.ccfield-prepend{
+  margin-bottom:20px;
+  width:100%;
+}
+
+.ccform-addon{
+    display: flex;
+    padding:8px;
+    width:100%;
+    padding-top: 15px;
+}
+.ccform-addon p {
+    width: fit-content;
+    line-height: 2.4rem;
+    font-size: 1.3rem;
+    font-family: 'Sofia', cursive;
+    margin-left: 20px;
+}
+.ccformfield {
+  border: 1px solid black;
+  padding:15.5px;
+  width:100%;
+  display:block;
+  font-family: 'Bree Serif', serif;
+  font-size:1rem;
+}
+
+.ccbtn{
+  display:block;
+  border:none;
+  padding:12px 25px;
+  cursor:pointer;
+  text-decoration:none;
+  font-weight:bold;
+}
+.ccbtn:hover{
+  background-color: black;
+  color: white;
+}
+.submit {
+    margin-top: 50px; 
+}
+.submit input{
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+    border: 1px solid black;
+    margin: auto;
+    background-color: var(--low-grey);
+}
+
+@media screen and (max-width: 480px){
+  .ccform {
+    width: 100%;
+    padding: 10px;
+  }
+  .ccform-addon p{
+    font-size: 1rem;
+  }
+}

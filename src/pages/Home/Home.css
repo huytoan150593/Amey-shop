@@ -37,6 +37,8 @@
 }
 .collection-wrapper {
     text-align: center;
+    max-width: 1500px;
+    margin: auto;
 }
 .collection-container {
     display: flex;
@@ -93,7 +95,8 @@
 @media screen and (max-width: 768px){}
 @media screen and (max-width: 480px){
     #slogan {
-        left: 0;
+        font-size: 1.8rem;
+        left: 12px;
     }
     #main-btn {
         top: 60%;

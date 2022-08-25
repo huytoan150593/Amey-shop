@@ -19,12 +19,11 @@ const Home = () => {
             <div className="collect-event">
               <h1>{item.event}</h1>
               <p>{item.description}</p>
-              <Link to={`/${item.event}`}><div className="shop-btn">View More</div></Link>
+              <Link to={`/collection/${item.event}`}><div className="shop-btn">View More</div></Link>
             </div>
           </div>
         ))}
       </div>
-
     </div>
   )
 }

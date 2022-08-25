@@ -31,7 +31,8 @@ const Collection = () => {
                             <AiOutlineStar color='rgb(243,181,25)' size="18px"/>
                         </div>
                         <h4>{item.price} &#8364;</h4>
-                        <AiOutlineShoppingCart className='cart' onClick={e => handleAddToCart(e)}/>
+                        <div className='cart-icon' onClick={e => handleAddToCart(e)}><AiOutlineShoppingCart size={30}/></div>
+                            <div className="cart-icon-pseudo">Add to Cart</div>
                     </div>
                 </div>
                 )

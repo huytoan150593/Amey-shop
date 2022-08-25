@@ -11,10 +11,10 @@ export const MobileMenu = () => {
   return (
     <div className="mobi-menu">
         <ul>
-          <li onClick={handleShowMenu}><Link to="">Home</Link></li>
-          <li onClick={handleShowMenu}><Link to="products">Products</Link></li>
-          <li onClick={handleShowMenu}><Link to="about">About Us</Link></li>
-          <li onClick={handleShowMenu}><Link to="contact">Contact</Link></li>
+          <Link to=""><li onClick={handleShowMenu}>Home</li></Link>
+          <Link to="products"><li onClick={handleShowMenu}>Products</li></Link>
+          <Link to="about"><li onClick={handleShowMenu}>About Us</li></Link>
+          <Link to="contact"><li onClick={handleShowMenu}>Contact</li></Link>
         </ul>
     </div>
   )

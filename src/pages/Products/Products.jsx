@@ -1,7 +1,7 @@
 import './Products.css';
 import { AiOutlineStar, AiOutlineShoppingCart } from 'react-icons/ai';
 import { data } from '../../constants/data';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Title from '../../components/Title/Title';
 import { CartContext } from '../../Context/GlobalContext';
 import { useContext } from 'react';
@@ -10,7 +10,6 @@ const Products = () => {
   return (
     <div id='products'>
         <Title title="All Item"/>
-        <Outlet />
         <div className="product-card">
             {data.map((item) => {
                 return (
@@ -27,7 +26,8 @@ const Products = () => {
                                 <AiOutlineStar color='rgb(243,181,25)' size="18px"/>
                             </div>
                             <h4>{item.price} &#8364;</h4>
-                            <AiOutlineShoppingCart className='cart' onClick={e => handleAddToCart(e)}/>
+                            <div className='cart-icon' onClick={e => handleAddToCart(e)}><AiOutlineShoppingCart size={30} style={{backgroundColor: 'transparent'}}/></div>
+                            <div className="cart-icon-pseudo">Add to Cart</div>
                         </div>
                     </div>
                     )
