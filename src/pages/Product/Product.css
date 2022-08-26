@@ -92,6 +92,14 @@
     font-size: large;
 }
 
+.product-description {
+    padding: 10px;
+}
+.product-description p {
+    line-height: 25px;
+    font-size: large;
+    margin: 10px;
+}
 /* Responsive */
 @media screen and (max-width: 1024px) {
 

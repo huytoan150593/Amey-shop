@@ -1,5 +1,5 @@
 #collection, #products {
-    
+    overflow-x: hidden;
 }
 
 .product-card {
@@ -88,7 +88,6 @@
     padding-left: 30px
 }
 .cart-icon:hover {
-    background-color: var(--mid-grey);
     opacity: .3;
 }
 .cart-icon:hover + .cart-icon-pseudo {

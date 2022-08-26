@@ -1,6 +1,6 @@
 import './App.css';
 import { CartContext } from './Context/GlobalContext';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { HashRouter, Route, Routes} from 'react-router-dom';
 import { Navbar } from './components/Navbar/Navbar';
 import { data } from './constants/data';
@@ -17,7 +17,17 @@ import NotFound from './pages/NotFound/NotFound';
 import Form from './components/Form/Form';
 
 function App() {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem("MY-CART")) || []);
+  useEffect(() => {
+    localStorage.setItem("MY-CART", JSON.stringify(cart));
+  }, [cart]);
+  const tempAlert = (msg,duration) => {
+    var el = document.createElement("div");
+    el.setAttribute("class","alert");
+    el.innerHTML = msg;
+    setTimeout(() => {el.parentNode.removeChild(el);}, duration);
+    document.body.appendChild(el);
+  }
   const handleAddToCart = (e) => {
     const newItemId = Number(e.target.closest(".pro").dataset.index);
     const newItem = {
@@ -26,11 +36,17 @@ function App() {
       size: "M",
       quantity: 1
     };
+    var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+    if (mobile) {
+        tempAlert("Added! Check your cart... or continue", 2000);              
+    } else {
+        tempAlert("Add Item success! Check your cart ", 2000);
+    }
     setCart(prev => [...prev, newItem]);
-}
+  }
   return (
     <HashRouter basename='/'>
-      <CartContext.Provider value={{cart, setCart, handleAddToCart}}>
+      <CartContext.Provider value={{cart, setCart, handleAddToCart, tempAlert}}>
       <div className="App">
         <Navbar />
         <Routes>

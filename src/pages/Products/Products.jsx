@@ -25,7 +25,7 @@ const Products = () => {
                                 <AiOutlineStar color='rgb(243,181,25)' size="18px"/>
                                 <AiOutlineStar color='rgb(243,181,25)' size="18px"/>
                             </div>
-                            <h4>{item.price} &#8364;</h4>
+                            <h4>{item.price} k;</h4>
                             <div className='cart-icon' onClick={e => handleAddToCart(e)}><AiOutlineShoppingCart size={30} style={{backgroundColor: 'transparent'}}/></div>
                             <div className="cart-icon-pseudo">Add to Cart</div>
                         </div>

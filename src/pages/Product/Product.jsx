@@ -8,14 +8,25 @@ import { CartContext } from '../../Context/GlobalContext';
 import { useContext } from 'react';
 
 const Product = () => {
-    const {setCart} = useContext(CartContext);
+    const {setCart, tempAlert} = useContext(CartContext);
     const params = useParams();
     const product = data.find(product => product.id.toString() === params.productId);
     const firstImg = product.images[0];
     const [url, setUrl] = useState(firstImg);
     const handleAddItem = (e) => {
-        const newItem = Number(e.target.closest(".single-pro-details").dataset.index);
+        const newItem = {
+            hashCode: Math.random()*10000 + product.id,
+            product: product,
+            quantity: 1,
+            size: "M",
+        }
         setCart(cart => [...cart, newItem]);
+        var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+        if (mobile) {
+            tempAlert("Added",1000 );              
+        } else {
+            tempAlert("Add Item success! Check your cart... ", 1000);
+        }
     }
     const handleClick = (e) => {
         const newUrl = e.target.getAttribute("src");
@@ -64,10 +75,14 @@ const Product = () => {
             <div className="single-pro-details" data-index={product.id}>
                 <h5>{product.collab}</h5>
                 <h1>{product.name}</h1>
-                <h2>&#8356; {product.price}</h2>
+                <h2>{product.price} k</h2>
                 <div id="add-btn" onClick={e => handleAddItem(e)}>Add To Cart</div> 
                 <h4><strong>&#9827; Product Detail</strong></h4>
-                <p>{product.description}</p>
+                <div className="product-description">
+                    {product.description.map((line,idx) => (
+                        <p key={idx}>{line}</p>
+                    ))}
+                </div>
             </div>
         </section>
     </>

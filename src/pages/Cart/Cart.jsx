@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { RiDeleteBin6Line } from 'react-icons/ri'
 import './Cart.css';
 import { CartContext } from '../../Context/GlobalContext';
 import { useContext } from 'react';
@@ -12,7 +13,7 @@ const Cart = () => {
     const length = cart.length;
     let total = 0;
     const handleDelete = (e) => {
-      const currentHashCode = Number(e.target.dataset.code);
+      const currentHashCode = Number(e.target.closest(".delete-btn").dataset.code);
       const newCart = cart.filter(item => item.hashCode !== currentHashCode);
       setCart(newCart);
     }
@@ -39,16 +40,15 @@ const Cart = () => {
     <div id="my-cart">
       <Title title="My Cart" />
       <div className="order-item-wrapper">
-      {(length !== 0) && cart.map((item) => {
+      {(length !== 0) && cart.map((item, idx) => {
         let amount = item.product.price * item.quantity;
         total += amount;
       return (
         <div key={item.hashCode} className="order-item">
-          <div className="delete-btn" data-code={item.hashCode} onClick={e => handleDelete(e)}>&#935;</div>
+          <div className="delete-btn" data-code={item.hashCode} onClick={e => handleDelete(e)}><RiDeleteBin6Line size={30}/></div>
           <div className='order-item-img'><img src={item.product.images[0]} alt="" /></div>
-          <h3 className="order-item-name">{item.product.name}</h3>
+          <p className="order-item-name">{`${idx+1}. ${item.product.name}`}</p>
           <div className='order-item-size'>
-            <label htmlFor="size">Size</label>
             <select name='size' data-code={item.hashCode} onChange={e => handleSetSize(e)}>
                     <option value="M">M</option>
                     <option value="S">S</option>
@@ -57,7 +57,6 @@ const Cart = () => {
             </select>
           </div>
           <div className='order-item-quantity'>
-            <label htmlFor="quantity">Quantity</label><br/>
             <input 
               name='quantity' 
               type="text" 
@@ -66,16 +65,15 @@ const Cart = () => {
               onChange={(e) => handleSetQuantity(e)}/>
           </div>
           <div className='order-item-amount'>
-            <p>Price</p>
-            <h4>${amount}</h4>
+            <h4>{amount} k</h4>
           </div>
         </div>
       )})}
       {(length === 0) && (
         <Empty />
         )}
-        <div id="total-amount">{`Total: ${total} $`}</div>
-        <Link to='order-form'><div id="order-btn">Order Now</div></Link>
+        <div id="total-amount">{`Total: ${total} k`}</div>
+        <Link to='order-form'><div className="order-btn">Order Now</div></Link>
         <Outlet />
       </div>
   </div>
