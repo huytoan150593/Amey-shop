@@ -23,9 +23,9 @@ const Product = () => {
         setCart(cart => [...cart, newItem]);
         var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
         if (mobile) {
-            tempAlert("Added",1000 );              
+            tempAlert("Added",1000, "alert-added" );              
         } else {
-            tempAlert("Add Item success! Check your cart... ", 1000);
+            tempAlert("Added", 1000, "alert-added");
         }
     }
     const handleClick = (e) => {

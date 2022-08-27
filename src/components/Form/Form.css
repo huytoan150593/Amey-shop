@@ -56,7 +56,6 @@
     font-family: 'Bree Serif', serif;
     border: 1px solid black;
     margin: auto;
-    background-color: var(--low-grey);
 }
 
 @media screen and (max-width: 480px){

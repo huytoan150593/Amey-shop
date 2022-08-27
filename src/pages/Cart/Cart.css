@@ -1,6 +1,9 @@
 #my-cart {
     text-align: center;
 }
+#empty img {
+    width: 400px;
+}
 .order-item-wrapper{
     margin: 30px auto;
 }
@@ -45,22 +48,39 @@
     background-color: transparent;
 }
 
-#my-cart ,.order-item select {
+#my-cart .order-item select {
     display: block;
     padding: 5px 10px;
     margin-bottom: 10px;
     margin-top: 10px;
     border: 1px solid var(--mid-grey);
 }
-#my-cart .order-item input {
+#my-cart .order-item-color input {
+    width: 60px;
+    height: 30px;
+    border: 1px solid black ;
+}
+#my-cart .order-item-quantity input {
     width: 40px;
-    height: 40px;
-    padding-left: 10px;
-    font-size: 16px;
-    margin-right: 10px;
+    height: 30px;
+    border: 1px solid black;
 }
 #my-cart h1 {
     font-family: 'Indie Flower', cursive;
+}
+#clear-btn {
+    display: flex;
+    align-items: center;
+    margin: 3%;
+    border: 1px solid black;
+    width: fit-content;
+    padding: 0.6rem;
+    margin: auto;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#clear-btn:hover{
+     background-color: var(--low-grey);
 }
 .order-item-wrapper #total-amount {
     font-size: large;

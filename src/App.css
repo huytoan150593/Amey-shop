@@ -25,16 +25,35 @@ a {
     text-decoration: none;
     color: inherit;
 }
-.alert {
-    position: fixed;
+.alert-added {
+    width: 250px;
+    height: 250px;
+    margin-top: -125px;  
+    margin-left: -125px;
+    background-image: url("../public/assets/success.png");
+}
+.alert-deleted {
+    width: 400px;
+    height: 250px;
+    margin-top: -125px; 
+    margin-left: -200px;
+    background-image: url("../public/assets/broken.png");
+}
+.alert-warning {
     width: 300px;
-    height: 80px;
+    height: 300px;
+    margin-top: -150px; 
+    margin-left: -150px;
+    background-image: url("../public/assets/warning.png");
+}
+.alert-added, .alert-deleted, .alert-warning {
+    position: fixed;
     top: 50%;
-    left: 50%;
-    margin-top: -40px; /* Negative half of height. */
-    margin-left: -150px; 
-    background-color: rgba(109,109,109,.8);
+    left: 50%; 
+    background-position: center;
+    background-size: cover;
     font-size: 1.5rem;
-    line-height: 2.5rem;
     border-radius: 10px;
+    font-family: 'Bree Serif', serif;
+    border: 1px solid var(--mid-grey);
 }

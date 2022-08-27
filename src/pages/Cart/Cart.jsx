@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { RiDeleteBin6Line } from 'react-icons/ri'
+import { RiDeleteBin6Line, RiDeleteBin2Fill } from 'react-icons/ri'
 import './Cart.css';
 import { CartContext } from '../../Context/GlobalContext';
 import { useContext } from 'react';
@@ -8,13 +8,19 @@ import Empty from '../../components/Empty/Empty';
 import { Link, Outlet } from 'react-router-dom';
 
 const Cart = () => {
-    const {cart, setCart} = useContext(CartContext);
+    const {cart, setCart, tempAlert} = useContext(CartContext);
     const [render, setRender] = useState(false);
     const length = cart.length;
     let total = 0;
     const handleDelete = (e) => {
       const currentHashCode = Number(e.target.closest(".delete-btn").dataset.code);
       const newCart = cart.filter(item => item.hashCode !== currentHashCode);
+      var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+      if (mobile) {
+          tempAlert("Deleted!", 1000, "alert-deleted");              
+      } else {
+          tempAlert("Deleted!", 1000, "alert-deleted");
+      }
       setCart(newCart);
     }
     const handleSetSize = (e) => {
@@ -36,6 +42,15 @@ const Cart = () => {
       };
       setRender(!render);
       }
+      const handleClearAll = () => {
+        var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+        if (mobile) {
+            tempAlert("Oops! Your mistake!", 1000, "alert-warning");              
+        } else {
+            tempAlert("Oops! So sad :(", 1000, "alert-warning");
+        }
+        setCart(cart => cart = []);
+      }
   return (
     <div id="my-cart">
       <Title title="My Cart" />
@@ -56,6 +71,9 @@ const Cart = () => {
                     <option value="XL">XL</option>
             </select>
           </div>
+          <div className="order-item-color">
+            <input type="text" name="color" placeholder='color'/>
+          </div>
           <div className='order-item-quantity'>
             <input 
               name='quantity' 
@@ -72,6 +90,10 @@ const Cart = () => {
       {(length === 0) && (
         <Empty />
         )}
+        <div id="clear-btn" onClick={handleClearAll}>
+          <RiDeleteBin2Fill size={30}/>
+          <p>Clear All</p>
+        </div>
         <div id="total-amount">{`Total: ${total} k`}</div>
         <Link to='order-form'><div className="order-btn">Order Now</div></Link>
         <Outlet />

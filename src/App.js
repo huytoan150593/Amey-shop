@@ -21,9 +21,9 @@ function App() {
   useEffect(() => {
     localStorage.setItem("MY-CART", JSON.stringify(cart));
   }, [cart]);
-  const tempAlert = (msg,duration) => {
+  const tempAlert = (msg,duration,type) => {
     var el = document.createElement("div");
-    el.setAttribute("class","alert");
+    el.setAttribute("class",type);
     el.innerHTML = msg;
     setTimeout(() => {el.parentNode.removeChild(el);}, duration);
     document.body.appendChild(el);
@@ -38,9 +38,9 @@ function App() {
     };
     var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
     if (mobile) {
-        tempAlert("Added! Check your cart... or continue", 2000);              
+        tempAlert("Added!", 1000, "alert-added");              
     } else {
-        tempAlert("Add Item success! Check your cart ", 2000);
+        tempAlert("Added!", 1000, "alert-added");
     }
     setCart(prev => [...prev, newItem]);
   }
